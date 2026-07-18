@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Projects | Niklas Mäckle</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- HEADER & NAVIGATION -->
+        <header>
+            <div class="nav-wrapper">
+                <div class="brand-name">
+                    <a href="index.html">NIKLAS MÄCKLE</a>
+                </div>
+                <nav class="nav-buttons">
+                    <a href="index.html" class="btn-nav" id="btn-home">Home</a>
+                    <a href="programming.html" class="btn-nav" id="btn-programming">Programming</a>
+                    <a href="voxel.html" class="btn-nav" id="btn-voxel">Voxel Art</a>
+                    <a href="resume.html" id="btn-resume" class="btn-nav">Résumé</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- MAIN CONTENT AREA -->
+        <main>
+            <h2 class="section-title">Programming Projects</h2>
+            <p style="margin-bottom: 2rem; color: var(--text-muted);">
+                Different programming projects I've worked on as part of my studies or within my free
+                time.
+            </p>
+
+            <div class="project-quick-nav"></div>
+
+            <div class="project-grid">
+
+                <!-- Project 0 - Project: Cube -->
+                <div class="project-card" id="voxel-rendering-experiments">
+                    <!-- Left Details -->
+                    <div class="project-text-content">
+                        <div>
+                            <div class="project-header">
+                                <h3 class="project-title">Cube (Working Title)</h3>
+                                <span class="project-meta">Godot / GDScript / MagicaVoxel</span>
+                            </div>
+                            <p class="project-desc">
+                                My little game project I started during my Master's thesis as a balance next to writing
+                                it. In it I combine my game development skills with my Voxel Art to create a voxel-based
+                                puzzle game.
+                                The game is in a first playable state at the moment but will require lots of additional
+                                work before I'll eventually officially announce it.</p>
+                        </div>
+                    </div>
+
+                    <!-- Right Media -->
+                    <div class="project-media-content">
+                        <div class="project-image-wrapper">
+                            <img src="img/cube/cube.png" alt="Cube (Working Title) Ingame Screenshot" />
+                        </div>
+                    </div>
+                </div> <!-- Closes Project 0 -->
+
+                <!-- Project 1 - Voxel Meshing -->
+                <div class="project-card" id="voxel-rendering-experiments">
+                    <!-- Left Details -->
+                    <div class="project-text-content">
+                        <div>
+                            <div class="project-header">
+                                <h3 class="project-title">Voxel Rendering Experiments</h3>
+                                <span class="project-meta">C++ / OpenGL / GLSL</span>
+                            </div>
+                            <p class="project-desc">
+                                Two different voxel rendering projects I worked on during my Master's degree.</p>
+                            <p class="project-desc">
+                                The first project was created for the module <i>Innovation Project (143601A)</i>
+                                at <a href="https://hdm-stuttgart.de/" target="_blank">Hochschule der Medien</a>.
+                                For it
+                                I developed two new GPU-based greedy meshing algorithms
+                                that leverage the power of the GPU's parallel processing. Afterwards I wrote a
+                                scientific paper based on the results.
+                            </p>
+                            <p class="project-desc">
+                                The second project expanded on the findings of the first one by comparing four
+                                different
+                                voxel rendering approaches for my <i>Master's thesis</i> investigating the tradeoffs
+                                between these methods.
+                                This included improvements to the rendering approach that performed better in the
+                                first
+                                project along with the implementation of <a
+                                    href="https://github.com/cgerikj/binary-greedy-meshing"
+                                    target="_blank"><strong>binary
+                                        greedy meshing</strong></a>, a <a
+                                    href="https://m4xc.dev/articles/amanatides-and-woo/" target="_blank"><strong>plain
+                                        DDA approach</strong></a>
+                                based on Amanatides and Woo as
+                                well as <a href="https://dubiousconst282.github.io/2024/10/03/voxel-ray-tracing/"
+                                    target="_blank"><strong>Sparse 64-Trees</strong></a>.
+                            </p>
+                            <p class="project-desc">
+                                The demo shows the castle scene I orginally made as part of my work for TuxedoLabs'
+                                <a href="https://teardowngame.com/" target="_blank">Teardown</a> that has since
+                                turned
+                                into the Go-To test scene for lots of voxel ray marching projects.
+                            </p>
+                        </div>
+
+                        <div class="project-details">
+                            <div class="detail-row">
+                                <span class="detail-label">Links:</span>
+                                <ul class="info-list">
+                                    <li style="display: flex; gap: 0.75rem; margin-bottom: 0.5rem; flex-wrap: wrap;">
+                                        <a href="https://github.com/knosvoxel/voxel-meshing" target="_blank">Project
+                                            1</a>
+                                        <span style="color: var(--border-color);">/</span>
+                                        <a href="https://github.com/knosvoxel/voxel-meshing-v2" target="_blank">Project
+                                            2 - Meshing</a>
+                                        <span style="color: var(--border-color);">/</span>
+                                        <a href="https://github.com/knosvoxel/voxel-ray-marching"
+                                            target="_blank">Project 2 - Ray Marching</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Media -->
+                    <div class="project-media-content">
+                        <div class="project-image-wrapper">
+                            <video class="click-video" src="img/renderer.mp4" poster="img/renderer.png" muted loop
+                                playsinline></video>
+
+                            <div class="video-timeline">
+                                <input type="range" class="seek-slider" min="0" max="100" value="0" step="0.1"
+                                    aria-label="Video progress">
+                            </div>
+
+                            <button class="play-btn" aria-label="Toggle video playback">
+                                <svg class="icon-play" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                                <svg class="icon-pause" viewBox="0 0 24 24" style="display: none;">
+                                    <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div> <!-- Closes Project 1 -->
+
+
+                <!-- Project 2 - Realtime Graphics Projects -->
+                <div class="project-card" id="realtime-graphics-projects">
+                    <!-- Left Details -->
+                    <div class="project-text-content">
+                        <div>
+                            <div class="project-header">
+                                <h3 class="project-title">Realtime Graphics Projects</h3>
+                                <span class="project-meta">Godot / GDScript / GLSL</span>
+                            </div>
+                            <p class="project-desc">
+                                A collection of projects I developed in <a href="https://godotengine.org/"
+                                    target="_blank" style="font-weight: bold;">Godot</a> for the module <i>Realtime
+                                    Graphics
+                                    (253064a)</i> at <a href="https://hdm-stuttgart.de/" target="_blank">Hochschule
+                                    der
+                                    Medien</a>. This lecture taught me different real-time rendering techniques with
+                                a
+                                major focus on shader programming using <a href="https://godotengine.org/"
+                                    target="_blank" style="font-weight: bold;">Godot</a>.
+                            </p>
+                            <p class="project-desc">
+                                The first project showcases a wood shader with adjustable parameters for age, snarl
+                                and
+                                different board parameters.
+                            </p>
+                            <p class="project-desc">
+                                The second project uses SDFs to rendering multiple animated lanters on top of a
+                                lake.
+                                Water and lantern parameters are adjustable in editor and the camera can be rotated
+                                on
+                                runtime.
+                            </p>
+                            <p class="project-desc">
+                                The third project also uses SDF-based rendering to display a rocky desert world that
+                                can
+                                be walked around in. It includes adjustable parameters for different lighting
+                                scenarios
+                                through adjustments of the sky.
+                            </p>
+                            <p class="project-desc">
+                                The fourth project displays a modifiable crown that is created from procedural
+                                geometry
+                                using Godot's immediate mesh system.
+                                The crown is able to reflect surrounding lights and includes adjustable parameters
+                                for
+                                its age/ demolition state, its rotation and and whether lights in the scene should
+                                be
+                                enable or not.
+                                Disabling the lights changes the lighting scenario.
+                                The crown itself can also be adjusted including paramters for its subdivision level
+                                as
+                                well as its tip and gem amounts.
+                            </p>
+                            <p class="project-desc">
+                                The final project created for the lecture displays a museum including multiple
+                                smaller
+                                projects that display the different aspects of what was learned throughout the
+                                lecture.
+                                In case of the project I created this includes an SDF-based teleportation portal,
+                                birds
+                                that fly around the scene, a cave containing reflective crystals, different donuts
+                                that
+                                display different shader-based materials and an interactable picture frame that
+                                changes
+                                its surrounding environment when interacted with.
+                            </p>
+                        </div>
+
+                        <div class="project-details">
+                            <div class="detail-row">
+                                <span class="detail-label">Links:</span>
+                                <ul class="info-list">
+                                    <li style="display: flex; gap: 0.75rem; margin-bottom: 0.5rem; flex-wrap: wrap;">
+                                        <a href="https://github.com/knosvoxel/realtime-graphics-projects"
+                                            target="_blank">Repository</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Media (Carousel of screenshots and videos) -->
+                    <div class="project-media-content">
+                        <div class="project-image-wrapper carousel-container">
+                            <div class="carousel-track">
+                                <div class="carousel-slide active">
+                                    <img src="img/realtime_graphics/wood.png" alt="Project 0 - Wood" />
+                                </div>
+
+                                <div class="carousel-slide">
+                                    <img src="img/realtime_graphics/lanterns.png" alt="Project 1 - Lanterns on water" />
+                                </div>
+
+                                <div class="carousel-slide">
+                                    <img src="img/realtime_graphics/desert.png" alt="Project 2 - Walkable Desert" />
+                                </div>
+
+                                <div class="carousel-slide">
+                                    <img src="img/realtime_graphics/crown.jpg" alt="Project 3 - Crown" />
+                                </div>
+
+                                <div class="carousel-slide">
+                                    <img src="img/realtime_graphics/portal.png" alt="Project 4 - Portal" />
+                                </div>
+
+                                <div class="carousel-slide">
+                                    <img src="img/realtime_graphics/cave.png" alt="Project 4 - Cave" />
+                                </div>
+
+                                <div class="carousel-slide">
+                                    <img src="img/realtime_graphics/donuts.png" alt="Project 4 - Material donuts" />
+                                </div>
+
+                                <div class="carousel-slide">
+                                    <img src="img/realtime_graphics/picture_frame.png"
+                                        alt="Project 4 - Picture Frame" />
+                                </div>
+                            </div>
+
+                            <!-- Navigation Arrows -->
+                            <button class="carousel-arrow prev-btn" aria-label="Previous slide">&#10094;</button>
+                            <button class="carousel-arrow next-btn" aria-label="Next slide">&#10095;</button>
+
+                            <!-- Dot Indicators -->
+                            <div class="carousel-dots">
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- Closes Project 2 -->
+
+                <!-- Project 3 - Looking for Elara -->
+                <div class="project-card">
+                    <!-- Left Details -->
+                    <div class="project-text-content">
+                        <div>
+                            <div class="project-header">
+                                <h3 class="project-title">Looking for Elara</h3>
+                                <span class="project-meta">Godot/ GDScript / GLSL</span>
+                            </div>
+                            <p class="project-desc">
+                                A vertical slice prototype for a game we called <b>Looking for Elara</b> we created for
+                                the module <i>Game Design (143410a)</i> with four people at <a
+                                    href="https://hdm-stuttgart.de/" target="_blank">Hochschule
+                                    der Medien</a>.
+                            </p>
+
+                            <p class="project-desc">
+                                “Looking for Elara” is an atmospheric 3D exploration game in which the player takes on
+                                the role of Kael, who is
+                                searching for his missing sister in a submarine. The player does so by collecting clues,
+                                solving puzzles and exploring mysterious underater landscapes to gradually reconstruct
+                                what really happened to her.
+                            </p>
+                            <p class="project-desc">
+                                My task was to do most of the programming of the game as well as establishing
+                                its visual
+                                look.
+                                This means, that I worked on all elements included in the puzzle to create
+                                modular
+                                building blocks our level designer was then able to use to build the levels
+                                with.
+                                I also created the movement system of the submarine and implemented any sounds
+                                and
+                                particles visible in the game. Additionally, I worked on the water shader and UI
+                                system.
+                            </p>
+                        </div>
+
+                        <div class="project-details">
+                            <div class="detail-row">
+                                <span class="detail-label">Links:</span>
+                                <ul class="info-list">
+                                    <li style="display: flex; gap: 0.75rem; margin-bottom: 0.5rem; flex-wrap: wrap;">
+                                        <a href="https://lohegrim.itch.io/looking-for-elara" target="_blank">Itch.io</a>
+                                        <span style="color: var(--border-color);">/</span>
+
+                                        <a href="https://github.com/knosvoxel/game-design-master-project"
+                                            target="_blank">Repository</a>
+                                    </li>
+                                    <li style="display: flex; gap: 0.75rem; margin-bottom: 0.5rem; flex-wrap: wrap;">
+
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-media-content">
+                        <div class="project-image-wrapper carousel-container">
+                            <div class="carousel-track">
+                                <div class="carousel-slide active">
+                                    <img src="img/elara/elara.png" alt="Elara - Ingame Screenshot 1" />
+                                </div>
+
+                                <div class="carousel-slide">
+                                    <img src="img/elara/elara_1.png" alt="Elara - Ingame Screenshot 2" />
+                                </div>
+
+                                <div class="carousel-slide">
+                                    <img src="img/elara/elara_2.png" alt="Elara - Ingame Screenshot 3" />
+                                </div>
+
+                                <div class="carousel-slide">
+                                    <img src="img/elara/elara_3.png" alt="Elara - Ingame Screenshot 4" />
+                                </div>
+
+                                <div class="carousel-slide">
+                                    <img src="img/elara/elara_4.png" alt="Elara - Ingame Screenshot 5" />
+                                </div>
+
+                                <div class="carousel-slide">
+                                    <img src="img/elara/elara_5.png" alt="Elara - Ingame Screenshot 6" />
+                                </div>
+                            </div>
+
+                            <!-- Navigation Arrows -->
+                            <button class="carousel-arrow prev-btn" aria-label="Previous slide">&#10094;</button>
+                            <button class="carousel-arrow next-btn" aria-label="Next slide">&#10095;</button>
+
+                            <!-- Dot Indicators -->
+                            <div class="carousel-dots">
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- Closes Project 3 -->
+
+
+                <!-- Project 4 - Boids -->
+                <div class="project-card">
+                    <!-- Left Details -->
+                    <div class="project-text-content">
+                        <div>
+                            <div class="project-header">
+                                <h3 class="project-title">Boids</h3>
+                                <span class="project-meta">Godot / GDScript/ GLSL</span>
+                            </div>
+                            <p class="project-desc">
+                                Two implementations of <a href="https://en.wikipedia.org/wiki/Boids target=" _blank"
+                                    style="font-weight: bold;">boids</a> using compute shaders developed in <a
+                                    href=" https://godotengine.org/" target="_blank"
+                                    style="font-weight: bold;">Godot</a>. Originally I experimented with these to see
+                                how useful they would be for another project I was working on at the time but evenutally
+                                hit barriers with Godot's slow compute shader readback implementation.
+                            </p>
+                        </div>
+
+                        <div class="project-details">
+                            <div class="detail-row">
+                                <span class="detail-label">Links:</span>
+                                <ul class="info-list">
+                                    <li style="display: flex; gap: 0.75rem; margin-bottom: 0.5rem; flex-wrap: wrap;">
+                                        <a href="https://github.com/knosvoxel/boids/" target="_blank">Repository</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Media -->
+                    <div class="project-media-content">
+                        <div class="project-image-wrapper">
+                            <video class="click-video" src="img/boids/boids.mp4" poster="img/boids/boids.png" muted loop
+                                playsinline></video>
+
+                            <div class="video-timeline">
+                                <input type="range" class="seek-slider" min="0" max="100" value="0" step="0.1"
+                                    aria-label="Video progress">
+                            </div>
+
+                            <button class="play-btn" aria-label="Toggle video playback">
+                                <svg class="icon-play" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                                <svg class="icon-pause" viewBox="0 0 24 24" style="display: none;">
+                                    <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div> <!-- Closes Project 4 -->
+
+                <!-- Project 5 - Game Jams -->
+                <div class="project-card">
+                    <!-- Left Details -->
+                    <div class="project-text-content">
+                        <div>
+                            <div class="project-header">
+                                <h3 class="project-title">Game Jams</h3>
+                                <span class="project-meta">Godot / GDScript</span>
+                            </div>
+                            <p class="project-desc">
+                                Various game jams I participated in resulted in fully playable games. I worked on these
+                                jams with different teams but my general task was always to take over part of the
+                                programming. Ludum Dare is a game jam where every participant is given a topic voted on
+                                by all participants from a selection of possible options. Each participant then has 72
+                                hours to develop a game based on that topic.
+                            </p>
+
+                            <p class="project-desc">
+                                The first game is called <b>Bug Driver 3D</b> and was developed for <b>Ludum Dare 58</b>
+                                with the theme "Collector". We worked in it with a team of five people including two
+                                programmers, one game designer, one sound designer and one artist.
+                                In the game you take over the role of the <i>bug driver</i> and have to rescue as many
+                                bugs as possible to bring them to safety because the temperature gets too low.
+                            </p>
+                            <p class="project-desc">
+                                The second game called <b>Timmy Dives</b> was developed for <b>Ludum Dare 57</b> that
+                                had the theme "Depths". We worked on the game with a total of six people that were on
+                                and off during the duration of the jam. In it you play a submarine that is able to shoot
+                                lasers to break surrounding rocks and have to reach the bottom by running away from
+                                enemy fish.
+                            </p>
+                        </div>
+
+                        <div class="project-details">
+                            <div class="detail-row">
+                                <span class="detail-label">Links:</span>
+                                <ul class="info-list">
+                                    <li style="display: flex; gap: 0.75rem; margin-bottom: 0.5rem; flex-wrap: wrap;">
+                                        <a href="https://reaktori.itch.io/bug-driver-3d" target="_blank">Bug Driver
+                                            3D - Itch.io</a>
+                                        <span style="color: var(--border-color);">/</span>
+                                        <a href="https://github.com/timo-eberl/bugdriver3d" target="_blank">Bug
+                                            Driver 3D - Repository</a>
+                                        <span style="color: var(--border-color);">/</span>
+                                        <a href="https://github.com/knosvoxel/voxel-ray-marching" target="_blank">Timmy
+                                            Dives - Itch.io</a>
+                                        <span style="color: var(--border-color);">/</span>
+                                        <a href="https://timo5034.itch.io/timmydives" target="_blank">Timmy
+                                            Dives - Repository</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Media -->
+                    <div class="project-media-content">
+                        <div class="project-image-wrapper carousel-container">
+                            <div class="carousel-track">
+                                <div class="carousel-slide active">
+                                    <img src="img/game_jams/bug_driver.webp" alt="Jams - Bug Driver 4" />
+                                </div>
+
+                                <div class="carousel-slide">
+                                    <img src="img/game_jams/bug_driver_2.gif" alt="Jams - Bug Driver 1" />
+                                </div>
+
+                                <div class="carousel-slide">
+                                    <img src="img/game_jams/bug_driver.gif" alt="Jams - Bug Driver 2" />
+                                </div>
+
+                                <div class="carousel-slide">
+                                    <img src="img/game_jams/timmy_1.png" alt="Jams - Timmy Dives 1" />
+                                </div>
+
+                                <div class="carousel-slide">
+                                    <img src="img/game_jams/timmy_2.png" alt="Jams - Timmy Dives 2" />
+                                </div>
+
+                                <div class="carousel-slide">
+                                    <img src="img/game_jams/timmy_3.png" alt="Jams - Timmy Dives 3" />
+                                </div>
+                            </div>
+
+                            <!-- Navigation Arrows -->
+                            <button class="carousel-arrow prev-btn" aria-label="Previous slide">&#10094;</button>
+                            <button class="carousel-arrow next-btn" aria-label="Next slide">&#10095;</button>
+
+                            <!-- Dot Indicators -->
+                            <div class="carousel-dots">
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- Closes Project 5 -->
+
+            </div> <!-- Closes .project-grid -->
+        </main>
+
+        <!-- Back to Top Button -->
+        <button id="backToTopBtn" class="back-to-top" aria-label="Scroll back to top">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" fill="currentColor" />
+            </svg>
+        </button>
+
+        <!-- FOOTER -->
+        <footer>
+            <p>&copy; 2026 Niklas Mäckle. All rights reserved.</p>
+        </footer>
+    </div>
+
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
