@@ -65,6 +65,71 @@
                     </div>
                 </div> <!-- Closes Project 0 -->
 
+                <!-- Blocks & Pieces -->
+                <div class="project-card" id="voxel-rendering-experiments">
+                    <!-- Left Details -->
+                    <div class="project-text-content">
+                        <div>
+                            <div class="project-header">
+                                <h3 class="project-title">Blocks & Pieces</h3>
+                                <span class="project-meta">Godot / GDScript</span>
+                            </div>
+                            <p class="project-desc">
+                                A 3D block breaking game inspired by Tetris and Block Blast! I made in about a month.
+                            </p>
+                            <p class="project-desc">
+                                Goal of the game is to collect points by completely filling layers of 4x4 blocks.
+                                Whenever a layer is filled it is
+                                cleared from the tower.
+                            </p>
+                            <p class="project-desc">
+                                Each round starts of with all elements in the game recolored creating a new look with
+                                each round!
+                            </p>
+                            <p class="project-desc">
+                                Before realizing how many buttons would actually be required to cover all features of
+                                this game I was planning to create
+                                it for mobile platforms as a learning experience hence the upright arrangement of
+                                everything.
+                            </p>
+                        </div>
+
+                        <div class="project-details">
+                            <div class="detail-row">
+                                <span class="detail-label">Links:</span>
+                                <ul class="info-list">
+                                    <li style="display: flex; gap: 0.75rem; margin-bottom: 0.5rem; flex-wrap: wrap;">
+                                        <a href="https://knosvoxel.itch.io/blocks-and-pieces"
+                                            target="_blank">Itch.io</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Media -->
+                    <div class="project-media-content">
+                        <div class="project-image-wrapper">
+                            <video class="click-video" src="img/blocks_pieces/output.webm"
+                                poster="img/blocks_pieces/cover.png" muted loop playsinline></video>
+
+                            <div class="video-timeline">
+                                <input type="range" class="seek-slider" min="0" max="100" value="0" step="0.1"
+                                    aria-label="Video progress">
+                            </div>
+
+                            <button class="play-btn" aria-label="Toggle video playback">
+                                <svg class="icon-play" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                                <svg class="icon-pause" viewBox="0 0 24 24" style="display: none;">
+                                    <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div> <!-- Closes Blocks & Pieces -->
+
                 <!-- Project 1 - Voxel Meshing -->
                 <div class="project-card" id="voxel-rendering-experiments">
                     <!-- Left Details -->
@@ -102,7 +167,7 @@
                                     target="_blank"><strong>Sparse 64-Trees</strong></a>.
                             </p>
                             <p class="project-desc">
-                                The demo shows the castle scene I orginally made as part of my work for TuxedoLabs'
+                                The video shows the castle scene I orginally made as part of my work for TuxedoLabs'
                                 <a href="https://teardowngame.com/" target="_blank">Teardown</a> that has since
                                 turned
                                 into the Go-To test scene for lots of voxel ray marching projects.
